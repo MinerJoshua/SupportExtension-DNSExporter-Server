@@ -30,17 +30,18 @@ def main():
         return
 
     # Example: Assume data is { "items": [...] }
-    if "items" in data and isinstance(data["items"], list):
-        item_list = data["items"]
-    else:
-        item_list = []
+    #if "items" in data and isinstance(data["id"], list):
+    #    item_list = data["items"]
+    #else:
+    #    item_list = [] */
 
+    id_list = [item["id"] for item in data if "id" in item]
     # Return list as JSON
     print("Content-Type: application/json")
     print("Access-Control-Allow-Methods: POST, GET, OPTIONS")
     print("Access-Control-Allow-Headers: Content-Type")
     print("Access-Control-Allow-Origin: chrome-extension://opialijmchklldmkipeobdalapddbbca\n")  # Allow extension to fetch this
-    print(json.dumps({"list": item_list}))
+    print(json.dumps({"list": id_list}))
 
 if __name__ == "__main__":
     import os
