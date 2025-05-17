@@ -1,49 +1,54 @@
 #!/usr/bin/env python3
 
 import sys
+import os
 import json
 import cgi
 import cgitb
 
 cgitb.enable()  # Enable detailed error reporting in browser
 
-def main():
+# === CONFIGURATION: Allowed Origins ===
+ALLOWED_ORIGINS = [
+    "chrome-extension://opialijmchklldmkipeobdalapddbbca",
+    "chrome-extension://dkjfmaelhonjgombiigplfeelicmgehm"
+]
 
-    # Handle preflight requests
-    if os.environ['REQUEST_METHOD'] == 'OPTIONS':
-        print("Access-Control-Allow-Origin: chrome-extension://opialijmchklldmkipeobdalapddbbca")
-        print("Access-Control-Allow-Methods: POST, GET, OPTIONS")
-        print("Access-Control-Allow-Headers: Content-Type")
-        print("Access-Control-Allow-Credentials: true\n")
-        sys.exit(0)
-    
- 
-    
+def send_cors_headers(origin):
+    if origin in ALLOWED_ORIGINS:
+        print(f"Access-Control-Allow-Origin: {origin}")
+        print("Access-Control-Allow-Credentials: true")
+    print("Access-Control-Allow-Methods: POST, GET, OPTIONS")
+    print("Access-Control-Allow-Headers: Content-Type")
+
+def main():
+    origin = os.environ.get("HTTP_ORIGIN", "")
+
+    # Handle preflight OPTIONS request
+    if os.environ.get("REQUEST_METHOD") == "OPTIONS":
+        send_cors_headers(origin)
+        print("Content-Type: text/plain")
+        print("Content-Length: 0\n")
+        return
+
+    # Start normal response
+    send_cors_headers(origin)
+    print("Content-Type: application/json\n")
+
     # Read JSON from stdin
     try:
         content_length = int(os.environ.get("CONTENT_LENGTH", 0))
         raw_input = sys.stdin.read(content_length)
         data = json.loads(raw_input)
     except Exception as e:
-        print("Content-Type: application/json\n")
         print(json.dumps({"error": str(e)}))
         return
 
-    # Example: Assume data is { "items": [...] }
-    #if "items" in data and isinstance(data["id"], list):
-    #    item_list = data["items"]
-    #else:
-    #    item_list = [] */
-
+    # Extract "id" fields
     id_list = [item["id"] for item in data if "id" in item]
-    # Return list as JSON
-    print("Content-Type: application/json")
-    print("Access-Control-Allow-Methods: POST, GET, OPTIONS")
-    print("Access-Control-Allow-Headers: Content-Type")
-    print("Access-Control-Allow-Origin: chrome-extension://opialijmchklldmkipeobdalapddbbca\n")  # Allow extension to fetch this
+
+    # Output JSON response
     print(json.dumps({"list": id_list}))
 
 if __name__ == "__main__":
-    import os
     main()
-
