@@ -1,0 +1,30 @@
+$ORIGIN ecomwebhost.com.
+$TTL 300
+
+ecomwebhost.com. IN SOA ns1.stackdns.com. hostmaster.stackdns.com. (
+    1743362356 ; Serial
+    1800 ; Refresh
+    900   ; Retry
+    1209600 ; Expire
+    300 ) ; Minimum TTL
+
+
+ecomwebhost.com. IN NS ns1.stackdns.com.
+ecomwebhost.com. IN NS ns2.stackdns.com.
+ecomwebhost.com. IN NS ns3.stackdns.com.
+ecomwebhost.com. IN NS ns4.stackdns.com.
+imap.ecomwebhost.com. IN CNAME imap.stackmail.com.
+pop3.ecomwebhost.com. IN CNAME pop3.stackmail.com.
+smtp.ecomwebhost.com. IN CNAME smtp.stackmail.com.
+mail.ecomwebhost.com. IN CNAME mail.stackmail.com.
+autodiscover.ecomwebhost.com. IN CNAME autodiscover.stackmail.com.
+ecomwebhost.com. IN MX 10 mx.stackmail.com.
+ecomwebhost.com. IN TXT "v=spf1 include:spf.stackmail.com a mx -all"
+ecomwebhost.com. IN A 185.151.30.223
+*.ecomwebhost.com. IN A 185.151.30.223
+ecomwebhost.com. IN AAAA 2a07:7800::223
+*.ecomwebhost.com. IN AAAA 2a07:7800::223
+ftp.ecomwebhost.com. IN CNAME ftp.gb.stackcp.com.
+selector1._domainkey.ecomwebhost.com. IN TXT "v=DKIM1;k=rsa;h=sha256;n=;s=*;t=s;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArKtnUcSzKqA2mlGYLcj6/Ra8EWyUnl7CEAuf0YEbVYE0uuiObCcR+WnO0FHsbjLsDXsD5uf7mgMxs0YLZrqsbuaB0bUL20HEEdjFNlDXnwsJkCPdVWhIX+3TtOGVTl1JRGQPfF5OLO7uR1UY5kZ/vaTmDH+K+RdEULxR5plOm0UjpyrKsnRxHvfT2A1c2XcDN/jOvBH80lhI+3tZJ4deoipGamfHOMRvx1kgpp1tmx3Di0CcjlP8RkxmHH2TX2SH3tGMYtYDf6l9DJwpwydbh6gayXGEceetx89G7BaLdnzXvO3lrVoHpau2hRfsh/CrbH/VnizFRz0guMGHFAYB4QIDAQAB"
+_dmarc.ecomwebhost.com. IN TXT "v=DMARC1;p=quarantine;sp=none;adkim=r;aspf=r;pct=100;rf=afrf;ri=86400;rua=mailto:dmarc@ecowebhost.com;ruf=mailto:dmarc@ecowebhost.com"
+booking.ecomwebhost.com. IN CNAME cal.com/joshuaecomwebhost/secret.

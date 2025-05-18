@@ -1,0 +1,27 @@
+$ORIGIN search.support.
+$TTL 300
+
+search.support. IN SOA ns1.stackdns.com. hostmaster.stackdns.com. (
+    1728916389 ; Serial
+    1800 ; Refresh
+    900   ; Retry
+    1209600 ; Expire
+    300 ) ; Minimum TTL
+
+
+search.support. IN NS ns1.stackdns.com.
+search.support. IN NS ns2.stackdns.com.
+search.support. IN NS ns3.stackdns.com.
+search.support. IN NS ns4.stackdns.com.
+imap.search.support. IN CNAME imap.stackmail.com.
+pop3.search.support. IN CNAME pop3.stackmail.com.
+smtp.search.support. IN CNAME smtp.stackmail.com.
+mail.search.support. IN CNAME mail.stackmail.com.
+autodiscover.search.support. IN CNAME autodiscover.stackmail.com.
+search.support. IN MX 10 mx.stackmail.com.
+search.support. IN TXT "v=spf1 include:spf.stackmail.com a mx -all"
+search.support. IN A 185.151.30.222
+*.search.support. IN A 185.151.30.222
+search.support. IN AAAA 2a07:7800::222
+*.search.support. IN AAAA 2a07:7800::222
+ftp.search.support. IN CNAME ftp.gb.stackcp.com.

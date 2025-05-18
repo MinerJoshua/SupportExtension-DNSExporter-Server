@@ -1,0 +1,66 @@
+$ORIGIN joshuaminer.uk.
+$TTL 300
+
+joshuaminer.uk. IN SOA ns1.stackdns.com. hostmaster.stackdns.com. (
+    1744724955 ; Serial
+    1800 ; Refresh
+    900   ; Retry
+    1209600 ; Expire
+    300 ) ; Minimum TTL
+
+
+joshuaminer.uk. IN NS ns1.stackdns.com.
+joshuaminer.uk. IN NS ns2.stackdns.com.
+joshuaminer.uk. IN NS ns3.stackdns.com.
+joshuaminer.uk. IN NS ns4.stackdns.com.
+imap.joshuaminer.uk. IN CNAME imap.stackmail.com.
+pop3.joshuaminer.uk. IN CNAME pop3.stackmail.com.
+smtp.joshuaminer.uk. IN CNAME smtp.stackmail.com.
+mail.joshuaminer.uk. IN CNAME mail.stackmail.com.
+autodiscover.joshuaminer.uk. IN CNAME autodiscover.stackmail.com.
+joshuaminer.uk. IN MX 10 mx.stackmail.com.
+joshuaminer.uk. IN TXT "google-site-verification=Rig1PTq5_1l9E6BEEwrv-mi0kc6jr6t5ZL7h7oM4cVQ"
+joshuaminer.uk. IN TXT "v=spf1 include:spf.stackmail.com a mx -all"
+joshuaminer.uk. IN A 185.151.30.191
+joshuaminer.uk. IN AAAA 2a07:7800::191
+ftp.joshuaminer.uk. IN CNAME ftp.gb.stackcp.com.
+test.joshuaminer.uk. IN A 185.151.30.208
+*.test.joshuaminer.uk. IN A 185.151.30.208
+test.joshuaminer.uk. IN AAAA 2a07:7800::208
+*.test.joshuaminer.uk. IN AAAA 2a07:7800::208
+test.joshuaminer.uk. IN MX 10 mx.stackmail.com.
+ftp.test.joshuaminer.uk. IN CNAME ftp.stackcp.com.
+elementor-testing-simon.joshuaminer.uk. IN A 185.151.30.207
+*.elementor-testing-simon.joshuaminer.uk. IN A 185.151.30.207
+elementor-testing-simon.joshuaminer.uk. IN AAAA 2a07:7800::207
+*.elementor-testing-simon.joshuaminer.uk. IN AAAA 2a07:7800::207
+elementor-testing-simon.joshuaminer.uk. IN MX 10 mx.stackmail.com.
+ftp.elementor-testing-simon.joshuaminer.uk. IN CNAME ftp.gb.stackcp.com.
+ohrm.joshuaminer.uk. IN A 185.151.30.140
+*.ohrm.joshuaminer.uk. IN A 185.151.30.140
+ohrm.joshuaminer.uk. IN AAAA 2a07:7800::140
+*.ohrm.joshuaminer.uk. IN AAAA 2a07:7800::140
+ohrm.joshuaminer.uk. IN MX 10 mx.stackmail.com.
+ftp.ohrm.joshuaminer.uk. IN CNAME ftp.gb.stackcp.com.
+roundcube.joshuaminer.uk. IN A 185.151.30.187
+*.roundcube.joshuaminer.uk. IN A 185.151.30.187
+roundcube.joshuaminer.uk. IN AAAA 2a07:7800::187
+*.roundcube.joshuaminer.uk. IN AAAA 2a07:7800::187
+roundcube.joshuaminer.uk. IN MX 10 mx.stackmail.com.
+ftp.roundcube.joshuaminer.uk. IN CNAME ftp.gb.stackcp.com.
+woocomerce.joshuaminer.uk. IN A 185.151.30.211
+*.woocomerce.joshuaminer.uk. IN A 185.151.30.211
+woocomerce.joshuaminer.uk. IN AAAA 2a07:7800::211
+*.woocomerce.joshuaminer.uk. IN AAAA 2a07:7800::211
+woocomerce.joshuaminer.uk. IN MX 10 mx.stackmail.com.
+ftp.woocomerce.joshuaminer.uk. IN CNAME ftp.gb.stackcp.com.
+dev.joshuaminer.uk. IN CNAME cp.stackcp.com.
+db.joshuaminer.uk. IN CNAME phpmyadmin.stackcp.com.
+builder.joshuaminer.uk. IN CNAME webbuilder.stackcp.com.
+webmail.joshuaminer.uk. IN CNAME webmail.stackcp.com.
+*.joshuaminer.uk. IN A 45.8.227.97
+*.win.joshuaminer.uk. IN A 45.8.227.97
+*.gb.joshuaminer.uk. IN A 45.8.227.97
+*.us.joshuaminer.uk. IN A 185.146.165.97
+_dmarc.joshuaminer.uk. IN TXT "v=DMARC1;p=quarantine;sp=none;adkim=r;aspf=r;pct=100;rf=afrf;ri=86400"
+s1._domainkey.joshuaminer.uk. IN TXT "v=DKIM1;k=rsa;h=sha256;n=;s=*;t=s;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAx8x0iSoXaDgqmP7b5ED3BPp7QnD+bNNiwY5Q3TVtpD0XwDEsq3+EGUFqawlrf//kMxOEOnogujlJX/ZJ/05pifcW/J92vlH2CQgHdNhtey1p1xrSzIp2MIFRKvSVdImu3AyOheZDDwTX8F6Y5UzeGKfgiWBznwidiNftOYhHNOUWy30pSPSZ0AiI7epZgZAo3ntF+/Y2cqOaQIS4CaihAJEHMRA2lie4DbiMDyS1V7dnvKajGrB9cicAc45H+RdRw1O4QnMUJHDLVX8knBn6NJwf2bUurjXlgMULC63f9FfeVHxOBoO4FQ0C9OP5b3dvWrfLRbWS0oD4vDp3GydkxQIDAQAB"

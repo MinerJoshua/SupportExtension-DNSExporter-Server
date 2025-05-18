@@ -1,0 +1,27 @@
+$ORIGIN webbuilder.de.
+$TTL 300
+
+webbuilder.de. IN SOA ns1.stackdns.com. hostmaster.stackdns.com. (
+    1733827869 ; Serial
+    1800 ; Refresh
+    900   ; Retry
+    1209600 ; Expire
+    300 ) ; Minimum TTL
+
+
+webbuilder.de. IN NS ns1.stackdns.com.
+webbuilder.de. IN NS ns2.stackdns.com.
+webbuilder.de. IN NS ns3.stackdns.com.
+webbuilder.de. IN NS ns4.stackdns.com.
+imap.webbuilder.de. IN CNAME imap.stackmail.com.
+pop3.webbuilder.de. IN CNAME pop3.stackmail.com.
+smtp.webbuilder.de. IN CNAME smtp.stackmail.com.
+mail.webbuilder.de. IN CNAME mail.stackmail.com.
+autodiscover.webbuilder.de. IN CNAME autodiscover.stackmail.com.
+webbuilder.de. IN MX 10 mx.stackmail.com.
+webbuilder.de. IN TXT "v=spf1 include:spf.stackmail.com a mx -all"
+webbuilder.de. IN A 185.151.30.224
+*.webbuilder.de. IN A 185.151.30.224
+webbuilder.de. IN AAAA 2a07:7800::224
+*.webbuilder.de. IN AAAA 2a07:7800::224
+ftp.webbuilder.de. IN CNAME ftp.stackcp.com.

@@ -1,0 +1,27 @@
+$ORIGIN testr343.com.
+$TTL 300
+
+testr343.com. IN SOA ns1.stackdns.com. hostmaster.stackdns.com. (
+    1744046187 ; Serial
+    1800 ; Refresh
+    900   ; Retry
+    1209600 ; Expire
+    300 ) ; Minimum TTL
+
+
+testr343.com. IN NS ns1.stackdns.com.
+testr343.com. IN NS ns2.stackdns.com.
+testr343.com. IN NS ns3.stackdns.com.
+testr343.com. IN NS ns4.stackdns.com.
+imap.testr343.com. IN CNAME imap.stackmail.com.
+pop3.testr343.com. IN CNAME pop3.stackmail.com.
+smtp.testr343.com. IN CNAME smtp.stackmail.com.
+mail.testr343.com. IN CNAME mail.stackmail.com.
+autodiscover.testr343.com. IN CNAME autodiscover.stackmail.com.
+testr343.com. IN MX 10 mx.stackmail.com.
+testr343.com. IN TXT "v=spf1 include:spf.stackmail.com a mx -all"
+testr343.com. IN A 185.151.30.152
+*.testr343.com. IN A 185.151.30.152
+testr343.com. IN AAAA 2a07:7800::152
+*.testr343.com. IN AAAA 2a07:7800::152
+ftp.testr343.com. IN CNAME ftp.gb.stackcp.com.

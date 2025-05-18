@@ -1,0 +1,27 @@
+$ORIGIN aplg.co.uk.
+$TTL 300
+
+aplg.co.uk. IN SOA ns1.example.org. hostmaster.example.org. (
+    1737033308 ; Serial
+    3600 ; Refresh
+    900   ; Retry
+    1209600 ; Expire
+    300 ) ; Minimum TTL
+
+
+aplg.co.uk. IN NS ns1.stackdns.com.
+aplg.co.uk. IN NS ns2.stackdns.com.
+aplg.co.uk. IN NS ns3.stackdns.com.
+aplg.co.uk. IN NS ns4.stackdns.com.
+imap.aplg.co.uk. IN CNAME imap.stackmail.com.
+pop3.aplg.co.uk. IN CNAME pop3.stackmail.com.
+smtp.aplg.co.uk. IN CNAME smtp.stackmail.com.
+mail.aplg.co.uk. IN CNAME mail.stackmail.com.
+autodiscover.aplg.co.uk. IN CNAME autodiscover.stackmail.com.
+aplg.co.uk. IN MX 10 mx.stackmail.com.
+aplg.co.uk. IN TXT "v=spf1 include:spf.stackmail.com a mx -all"
+aplg.co.uk. IN A 185.151.30.224
+*.aplg.co.uk. IN A 185.151.30.224
+aplg.co.uk. IN AAAA 2a07:7800::224
+*.aplg.co.uk. IN AAAA 2a07:7800::224
+ftp.aplg.co.uk. IN CNAME ftp.gb.stackcp.com.

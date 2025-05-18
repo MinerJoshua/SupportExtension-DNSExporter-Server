@@ -1,0 +1,27 @@
+$ORIGIN computerko.com.
+$TTL 300
+
+computerko.com. IN SOA ns1.example.org. hostmaster.example.org. (
+    1738331545 ; Serial
+    3600 ; Refresh
+    900   ; Retry
+    1209600 ; Expire
+    300 ) ; Minimum TTL
+
+
+computerko.com. IN NS ns1.stackdns.com.
+computerko.com. IN NS ns2.stackdns.com.
+computerko.com. IN NS ns3.stackdns.com.
+computerko.com. IN NS ns4.stackdns.com.
+imap.computerko.com. IN CNAME imap.stackmail.com.
+pop3.computerko.com. IN CNAME pop3.stackmail.com.
+smtp.computerko.com. IN CNAME smtp.stackmail.com.
+mail.computerko.com. IN CNAME mail.stackmail.com.
+autodiscover.computerko.com. IN CNAME autodiscover.stackmail.com.
+computerko.com. IN MX 10 mx.stackmail.com.
+computerko.com. IN TXT "v=spf1 include:spf.stackmail.com a mx -all"
+computerko.com. IN A 185.151.30.223
+*.computerko.com. IN A 185.151.30.223
+computerko.com. IN AAAA 2a07:7800::223
+*.computerko.com. IN AAAA 2a07:7800::223
+ftp.computerko.com. IN CNAME ftp.gb.stackcp.com.

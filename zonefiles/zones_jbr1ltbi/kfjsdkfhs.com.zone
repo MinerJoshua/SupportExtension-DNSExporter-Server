@@ -1,0 +1,27 @@
+$ORIGIN kfjsdkfhs.com.
+$TTL 300
+
+kfjsdkfhs.com. IN SOA ns1.stackdns.com. hostmaster.stackdns.com. (
+    1744046245 ; Serial
+    1800 ; Refresh
+    900   ; Retry
+    1209600 ; Expire
+    300 ) ; Minimum TTL
+
+
+kfjsdkfhs.com. IN NS ns1.stackdns.com.
+kfjsdkfhs.com. IN NS ns2.stackdns.com.
+kfjsdkfhs.com. IN NS ns3.stackdns.com.
+kfjsdkfhs.com. IN NS ns4.stackdns.com.
+imap.kfjsdkfhs.com. IN CNAME imap.stackmail.com.
+pop3.kfjsdkfhs.com. IN CNAME pop3.stackmail.com.
+smtp.kfjsdkfhs.com. IN CNAME smtp.stackmail.com.
+mail.kfjsdkfhs.com. IN CNAME mail.stackmail.com.
+autodiscover.kfjsdkfhs.com. IN CNAME autodiscover.stackmail.com.
+kfjsdkfhs.com. IN MX 10 mx.stackmail.com.
+kfjsdkfhs.com. IN TXT "v=spf1 include:spf.stackmail.com a mx -all"
+kfjsdkfhs.com. IN A 185.151.30.152
+*.kfjsdkfhs.com. IN A 185.151.30.152
+kfjsdkfhs.com. IN AAAA 2a07:7800::152
+*.kfjsdkfhs.com. IN AAAA 2a07:7800::152
+ftp.kfjsdkfhs.com. IN CNAME ftp.gb.stackcp.com.

@@ -1,0 +1,45 @@
+$ORIGIN api-test.com.
+$TTL 300
+
+api-test.com. IN SOA ns1.stackdns.com. hostmaster.stackdns.com. (
+    1732017600 ; Serial
+    1800 ; Refresh
+    900   ; Retry
+    1209600 ; Expire
+    300 ) ; Minimum TTL
+
+
+api-test.com. IN NS ns1.stackdns.com.
+api-test.com. IN NS ns2.stackdns.com.
+api-test.com. IN NS ns3.stackdns.com.
+api-test.com. IN NS ns4.stackdns.com.
+api-test.com. IN A 185.151.30.191
+*.api-test.com. IN A 185.151.30.191
+api-test.com. IN AAAA 2a07:7800::191
+*.api-test.com. IN AAAA 2a07:7800::191
+ftp.api-test.com. IN CNAME ftp.gb.stackcp.com.
+imap.api-test.com. IN CNAME imap.stackmail.com.
+pop3.api-test.com. IN CNAME pop3.stackmail.com.
+smtp.api-test.com. IN CNAME smtp.stackmail.com.
+mail.api-test.com. IN CNAME mail.stackmail.com.
+autodiscover.api-test.com. IN CNAME autodiscover.stackmail.com.
+api-test.com. IN MX 10 mx.stackmail.com.
+api-test.com. IN TXT "v=spf1 include:spf.stackmail.com a mx -all"
+support.api-test.com. IN A 185.151.30.222
+*.support.api-test.com. IN A 185.151.30.222
+support.api-test.com. IN AAAA 2a07:7800::222
+*.support.api-test.com. IN AAAA 2a07:7800::222
+support.api-test.com. IN MX 10 mx.stackmail.com.
+ftp.support.api-test.com. IN CNAME ftp.gb.stackcp.com.
+second.api-test.com. IN A 185.151.30.222
+*.second.api-test.com. IN A 185.151.30.222
+second.api-test.com. IN AAAA 2a07:7800::222
+*.second.api-test.com. IN AAAA 2a07:7800::222
+second.api-test.com. IN MX 10 mx.stackmail.com.
+ftp.second.api-test.com. IN CNAME ftp.gb.stackcp.com.
+third.api-test.com. IN A 185.151.30.222
+*.third.api-test.com. IN A 185.151.30.222
+third.api-test.com. IN AAAA 2a07:7800::222
+*.third.api-test.com. IN AAAA 2a07:7800::222
+third.api-test.com. IN MX 10 mx.stackmail.com.
+ftp.third.api-test.com. IN CNAME ftp.gb.stackcp.com.

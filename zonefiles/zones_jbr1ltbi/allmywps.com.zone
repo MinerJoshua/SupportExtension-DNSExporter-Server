@@ -1,0 +1,33 @@
+$ORIGIN allmywps.com.
+$TTL 300
+
+allmywps.com. IN SOA ns1.stackdns.com. hostmaster.stackdns.com. (
+    1735834704 ; Serial
+    1800 ; Refresh
+    900   ; Retry
+    1209600 ; Expire
+    300 ) ; Minimum TTL
+
+
+allmywps.com. IN NS ns1.stackdns.com.
+allmywps.com. IN NS ns2.stackdns.com.
+allmywps.com. IN NS ns3.stackdns.com.
+allmywps.com. IN NS ns4.stackdns.com.
+imap.allmywps.com. IN CNAME imap.stackmail.com.
+pop3.allmywps.com. IN CNAME pop3.stackmail.com.
+smtp.allmywps.com. IN CNAME smtp.stackmail.com.
+mail.allmywps.com. IN CNAME mail.stackmail.com.
+autodiscover.allmywps.com. IN CNAME autodiscover.stackmail.com.
+allmywps.com. IN MX 10 mx.stackmail.com.
+allmywps.com. IN TXT "v=spf1 include:spf.stackmail.com a mx -all"
+allmywps.com. IN A 185.151.30.224
+*.allmywps.com. IN A 185.151.30.224
+allmywps.com. IN AAAA 2a07:7800::224
+*.allmywps.com. IN AAAA 2a07:7800::224
+ftp.allmywps.com. IN CNAME ftp.gb.stackcp.com.
+dev.allmywps.com. IN A 185.151.30.224
+*.dev.allmywps.com. IN A 185.151.30.224
+dev.allmywps.com. IN AAAA 2a07:7800::224
+*.dev.allmywps.com. IN AAAA 2a07:7800::224
+dev.allmywps.com. IN MX 10 mx.stackmail.com.
+ftp.dev.allmywps.com. IN CNAME ftp.gb.stackcp.com.

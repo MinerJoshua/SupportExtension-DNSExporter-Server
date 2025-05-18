@@ -1,0 +1,27 @@
+$ORIGIN allmywp.com.
+$TTL 300
+
+allmywp.com. IN SOA ns1.stackdns.com. hostmaster.stackdns.com. (
+    1735834881 ; Serial
+    1800 ; Refresh
+    900   ; Retry
+    1209600 ; Expire
+    300 ) ; Minimum TTL
+
+
+allmywp.com. IN NS ns1.stackdns.com.
+allmywp.com. IN NS ns2.stackdns.com.
+allmywp.com. IN NS ns3.stackdns.com.
+allmywp.com. IN NS ns4.stackdns.com.
+allmywp.com. IN A 185.151.30.224
+*.allmywp.com. IN A 185.151.30.224
+allmywp.com. IN AAAA 2a07:7800::224
+*.allmywp.com. IN AAAA 2a07:7800::224
+ftp.allmywp.com. IN CNAME ftp.gb.stackcp.com.
+imap.allmywp.com. IN CNAME imap.stackmail.com.
+pop3.allmywp.com. IN CNAME pop3.stackmail.com.
+smtp.allmywp.com. IN CNAME smtp.stackmail.com.
+mail.allmywp.com. IN CNAME mail.stackmail.com.
+autodiscover.allmywp.com. IN CNAME autodiscover.stackmail.com.
+allmywp.com. IN MX 10 mx.stackmail.com.
+allmywp.com. IN TXT "v=spf1 include:spf.stackmail.com a mx -all"
