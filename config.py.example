@@ -1,0 +1,14 @@
+ZONE_OUTPUT_DIR = ""
+TEMP_OUTPUT_DIR = ""
+SESSION_COOKIE_NAME = ""
+ALLOWED_ORIGINS = [
+    "",
+    ""
+]
+DB_CONFIG = {
+    "host": "localhost",
+    "user": "your_db_user",
+    "password": "your_secure_password",
+    "database": "your_db_name"
+}
+

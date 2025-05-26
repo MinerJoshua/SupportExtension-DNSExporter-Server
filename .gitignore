@@ -1,3 +1,7 @@
 .htaccess
 .git
 zonefiles/
+.ExtensionPrivateKey
+.ExtensionPrivateKey.pub
+config.py
+__pycache__/
