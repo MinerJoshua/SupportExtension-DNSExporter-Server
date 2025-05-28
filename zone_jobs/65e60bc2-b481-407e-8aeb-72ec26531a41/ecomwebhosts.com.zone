@@ -1,0 +1,27 @@
+$ORIGIN ecomwebhosts.com.
+$TTL 300
+
+ecomwebhosts.com. IN SOA ns1.stackdns.com. hostmaster.stackdns.com. (
+    1742239581 ; Serial
+    1800 ; Refresh
+    900   ; Retry
+    1209600 ; Expire
+    300 ) ; Minimum TTL
+
+
+ecomwebhosts.com. IN NS ns1.stackdns.com.
+ecomwebhosts.com. IN NS ns2.stackdns.com.
+ecomwebhosts.com. IN NS ns3.stackdns.com.
+ecomwebhosts.com. IN NS ns4.stackdns.com.
+ecomwebhosts.com. IN A 185.151.30.223
+*.ecomwebhosts.com. IN A 185.151.30.223
+ecomwebhosts.com. IN AAAA 2a07:7800::223
+*.ecomwebhosts.com. IN AAAA 2a07:7800::223
+ftp.ecomwebhosts.com. IN CNAME ftp.gb.stackcp.com.
+imap.ecomwebhosts.com. IN CNAME imap.stackmail.com.
+pop3.ecomwebhosts.com. IN CNAME pop3.stackmail.com.
+smtp.ecomwebhosts.com. IN CNAME smtp.stackmail.com.
+mail.ecomwebhosts.com. IN CNAME mail.stackmail.com.
+autodiscover.ecomwebhosts.com. IN CNAME autodiscover.stackmail.com.
+ecomwebhosts.com. IN MX 10 mx.stackmail.com.
+ecomwebhosts.com. IN TXT "v=spf1 include:spf.stackmail.com a mx -all"

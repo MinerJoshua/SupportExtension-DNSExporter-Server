@@ -5,3 +5,6 @@ zonefiles/
 .ExtensionPrivateKey.pub
 config.py
 __pycache__/
+tmp/
+log/
+

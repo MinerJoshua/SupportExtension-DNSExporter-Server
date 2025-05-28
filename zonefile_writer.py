@@ -72,7 +72,8 @@ def convert_and_write_zone(package_id, api_data, job_id, output_dir="zone_jobs")
 
     written_files = []
 
-    for domain, records in api_data.items():
+    for domain, data in api_data.items():
+        records = data.get("records", [])
         zone_text = build_zone_file(domain, records)
         file_path = Path(job_path) / f"{domain}.zone"
         with open(file_path, "w") as f:
@@ -80,4 +81,3 @@ def convert_and_write_zone(package_id, api_data, job_id, output_dir="zone_jobs")
         written_files.append(str(file_path))
 
     return written_files[0] if written_files else None
-

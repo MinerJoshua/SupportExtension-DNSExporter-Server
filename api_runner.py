@@ -1,5 +1,9 @@
 import requests
+import logging
+import os
+
 from config import SESSION_COOKIE_NAME
+
 
 def fetch_package_dns(package_id, session_token):
     """
@@ -17,15 +21,26 @@ def fetch_package_dns(package_id, session_token):
         "Cookie": f"PHPSESSID={session_token}"
     }
 
+    # Define the log directory and file name
+    log_path = os.path.join("log","api.log")
+    
+    # Configure logging
+    logging.basicConfig(
+        filename=log_path,
+        filemode='a',
+        format='%(asctime)s - %(levelname)s - %(message)s',
+        level=logging.INFO
+    )
+
     try:
         response = requests.get(url, headers=headers, timeout=10)
         if response.ok:
             return response.json()
         else:
-            print(f"API call failed for package {package_id}: {response.status_code}")
+            logging.info(f"API call failed for package {package_id}: {response.status_code}")
             return None
     except Exception as e:
-        print(f"Exception for package {package_id}: {e}")
+        logging.info(f"Exception for package {package_id}: {e}")
         return None
 
 

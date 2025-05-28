@@ -1,4 +1,5 @@
 import mysql.connector
+import json
 from mysql.connector import Error
 import time
 from config import DB_CONFIG
@@ -60,16 +61,16 @@ def save_job(job_id, input_data, status="starting"):
     cursor.close()
     conn.close()
 
-def update_failed_job_item(job_id ,package_id, zone_path):
+def update_failed_job_item(job_id, package_id, zone_path="zone_jobs", error=None):
     conn = get_connection()
     cursor = conn.cursor()
     cursor.execute("""
-        INSERT INTO failed_job_items (job_id, package_id, zone_path)
+        INSERT INTO failed_job_items (job_id, package_id, zone_path, error)
         VALUES (%s, %s, %s, %s)
-        ON DUPLICATE KEY UPDATE,
+        ON DUPLICATE KEY UPDATE
             zone_path = VALUES(zone_path),
             updated_at = CURRENT_TIMESTAMP
-    """, (job_id, package_id, zone_path))
+    """, (job_id, package_id, zone_path, error))
     conn.commit()
     cursor.close()
     conn.close()

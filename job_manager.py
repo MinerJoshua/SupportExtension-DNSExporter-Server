@@ -17,13 +17,13 @@ def start_job(payload, session_token):
 
         # Step 3: API calls
         update_job_status(job_id, "fetching DNS data and writing to Zone file")
-        writing_complete = process_job_items_streaming(job_id,package_ids,session_token)
+        zone_paths,isWritingComplete = process_job_items_streaming(job_id,package_ids,session_token)
 
-        if writing_complete is not True:
+        if isWritingComplete is not True:
             raise
     
         # Done
-        update_job_status(job_id, "complete", result_path=";".join(zone_paths))
+        update_job_status(job_id, "completed", result_path=";".join(zone_paths))
         return job_id, zone_paths
 
     except Exception as e:

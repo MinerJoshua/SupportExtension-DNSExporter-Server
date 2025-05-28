@@ -1,0 +1,27 @@
+$ORIGIN urpapahouse.ng.
+$TTL 300
+
+urpapahouse.ng. IN SOA ns1.stackdns.com. hostmaster.stackdns.com. (
+    1690727323 ; Serial
+    1800 ; Refresh
+    900   ; Retry
+    1209600 ; Expire
+    300 ) ; Minimum TTL
+
+
+urpapahouse.ng. IN NS ns1.stackdns.com.
+urpapahouse.ng. IN NS ns2.stackdns.com.
+urpapahouse.ng. IN NS ns3.stackdns.com.
+urpapahouse.ng. IN NS ns4.stackdns.com.
+urpapahouse.ng. IN A 185.151.30.199
+*.urpapahouse.ng. IN A 185.151.30.199
+urpapahouse.ng. IN AAAA 2a07:7800::199
+*.urpapahouse.ng. IN AAAA 2a07:7800::199
+ftp.urpapahouse.ng. IN CNAME ftp.gb.stackcp.com.
+imap.urpapahouse.ng. IN CNAME imap.stackmail.com.
+pop3.urpapahouse.ng. IN CNAME pop3.stackmail.com.
+smtp.urpapahouse.ng. IN CNAME smtp.stackmail.com.
+mail.urpapahouse.ng. IN CNAME mail.stackmail.com.
+autodiscover.urpapahouse.ng. IN CNAME autodiscover.stackmail.com.
+urpapahouse.ng. IN MX 10 mx.stackmail.com.
+urpapahouse.ng. IN TXT "v=spf1 include:spf.stackmail.com a mx -all"

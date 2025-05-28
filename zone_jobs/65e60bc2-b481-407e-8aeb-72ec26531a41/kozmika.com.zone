@@ -1,0 +1,27 @@
+$ORIGIN kozmika.com.
+$TTL 300
+
+kozmika.com. IN SOA ns1.stackdns.com. hostmaster.stackdns.com. (
+    1725135054 ; Serial
+    1800 ; Refresh
+    900   ; Retry
+    1209600 ; Expire
+    300 ) ; Minimum TTL
+
+
+kozmika.com. IN NS ns1.stackdns.com.
+kozmika.com. IN NS ns2.stackdns.com.
+kozmika.com. IN NS ns3.stackdns.com.
+kozmika.com. IN NS ns4.stackdns.com.
+imap.kozmika.com. IN CNAME imap.stackmail.com.
+pop3.kozmika.com. IN CNAME pop3.stackmail.com.
+smtp.kozmika.com. IN CNAME smtp.stackmail.com.
+mail.kozmika.com. IN CNAME mail.stackmail.com.
+autodiscover.kozmika.com. IN CNAME autodiscover.stackmail.com.
+kozmika.com. IN MX 10 mx.stackmail.com.
+kozmika.com. IN TXT "v=spf1 include:spf.stackmail.com a mx -all"
+kozmika.com. IN A 185.151.30.219
+*.kozmika.com. IN A 185.151.30.219
+kozmika.com. IN AAAA 2a07:7800::219
+*.kozmika.com. IN AAAA 2a07:7800::219
+ftp.kozmika.com. IN CNAME ftp.gb.stackcp.com.
