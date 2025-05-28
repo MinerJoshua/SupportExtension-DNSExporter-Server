@@ -1,6 +1,7 @@
 .htaccess
 .git
 zonefiles/
+zone_jobs/
 .ExtensionPrivateKey
 .ExtensionPrivateKey.pub
 config.py
